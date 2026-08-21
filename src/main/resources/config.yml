@@ -9,6 +9,8 @@ settings:
   power-per-death: -2.0
   # Power gained by the killer on each kill
   power-per-kill: 1.0
+  # Power gained when joining a faction
+  power-per-join: 1.0
   # Power regenerated per minute
   power-regen-per-min: 1.0
   # Regeneration interval (seconds)
@@ -66,9 +68,11 @@ messages:
   home-set: "&aThe faction HQ has been set to your position."
   home-not-set: "&cYour faction has not set an HQ yet. Use &e/f sethome&c."
   home-teleported: "&aTeleporting to the faction HQ..."
+  home-deleted: "&aThe faction HQ has been removed."
   protection-denied: "&cThis territory belongs to the faction &e%faction%&c."
   death-power-loss: "&cYou lost &e%power%&c power. Power: &e%total%&c/%max%."
   kill-power-gain: "&aYou gained &e%power%&a power. Power: &e%total%&a/%max%."
+  join-power-gain: "&aYou gained &e%power%&a power by joining the faction. Power: &e%total%&a/%max%."
   chat-format: "&7[&e%faction%&7] &6%player%&7: %message%"
   chat-toggled-on: "&aFaction chat enabled. Switch back to public chat with &e/f c&a."
   chat-toggled-off: "&aPublic chat enabled."
@@ -107,6 +111,7 @@ messages:
     - "&e/f unclaim &7- Unclaim the current chunk"
     - "&e/f unclaimall &7- Unclaim all territory"
     - "&e/f sethome &7- Set the faction HQ"
+    - "&e/f delhome &7- Remove the faction HQ"
     - "&e/f home &7- Teleport to the HQ"
     - "&e/f info [faction] &7- Faction information"
     - "&e/f c [message] &7- Faction chat"

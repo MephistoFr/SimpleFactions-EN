@@ -64,6 +64,10 @@ public class ConfigManager {
         return config.getDouble("settings.power-per-kill", 1.0);
     }
 
+    public double getPowerPerJoin() {
+        return config.getDouble("settings.power-per-join", 1.0);
+    }
+
     public double getPowerRegenPerMinute() {
         return config.getDouble("settings.power-regen-per-min", 1.0);
     }

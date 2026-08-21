@@ -107,6 +107,14 @@ public class FactionManager {
         faction.removeInvite(player.getUniqueId());
         FactionPlayer fp = plugin.getPowerManager().getPlayer(player);
         fp.setFactionId(faction.getId());
+        double gain = plugin.getConfigManager().getPowerPerJoin();
+        if (gain != 0) {
+            plugin.getPowerManager().setPower(fp, fp.getPower() + gain);
+            player.sendMessage(plugin.getConfigManager().msg("join-power-gain",
+                    "%power%", PowerManager.formatPower(gain),
+                    "%total%", PowerManager.formatPower(fp.getPower()),
+                    "%max%", PowerManager.formatPower(plugin.getPowerManager().getMaxPower(fp))));
+        }
         return true;
     }
 

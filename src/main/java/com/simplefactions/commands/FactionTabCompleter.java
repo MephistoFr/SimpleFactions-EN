@@ -16,7 +16,7 @@ public class FactionTabCompleter implements TabCompleter {
 
     private static final List<String> SUBCOMMANDS = Arrays.asList(
             "create", "disband", "invite", "join", "leave", "kick",
-            "claim", "unclaim", "unclaimall", "sethome", "home",
+            "claim", "unclaim", "unclaimall", "sethome", "delhome", "home",
             "info", "chat", "c", "promote", "demote", "reload", "gui", "help"
     );
 

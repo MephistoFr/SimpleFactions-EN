@@ -200,6 +200,16 @@ public class Faction {
         this.homeSet = true;
     }
 
+    public void removeHome() {
+        this.homeSet = false;
+        this.homeWorld = null;
+        this.homeX = 0;
+        this.homeY = 0;
+        this.homeZ = 0;
+        this.homeYaw = 0;
+        this.homePitch = 0;
+    }
+
     public boolean isHomeSet() {
         return homeSet;
     }

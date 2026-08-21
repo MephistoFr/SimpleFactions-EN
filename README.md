@@ -11,7 +11,7 @@ Complete **Factions** plugin for **Paper 1.21.x** servers (**1.21 to 1.21.11**),
 - **Faction management**: create, disband, invite, accept, kick and leave.
 - **Rank system**: Leader, Mod (Officer), Member, Recruit, with promotion/demotion (`/f promote`, `/f demote`).
 - **Chat**: in-game faction chat and public/faction chat toggle (`/f c`).
-- **Power**: max 10 per player, lose 2 on death, gain 1 per kill, regenerates over time (even offline).
+- **Power**: max 10 per player, lose 2 on death, gain 1 per kill, gain 1 when joining a faction, regenerates over time (even offline).
 - **Claims**: claim/unclaim chunks based on the faction's total power, full territory protection (break, place, chests, interactions).
 - **Overclaim**: steal an enemy chunk when the enemy faction's total power drops below its number of claims.
 - **HQ**: `/f sethome` and `/f home`.
@@ -50,7 +50,8 @@ Complete **Factions** plugin for **Paper 1.21.x** servers (**1.21 to 1.21.11**),
 | `/f claim` | Claim the current chunk | All members |
 | `/f unclaim` | Unclaim the current chunk | All members |
 | `/f unclaimall` | Unclaim all territory | Leader/Mod |
-| `/f sethome` | Set the faction HQ | All members |
+| `/f sethome` | Set the faction HQ | Leader/Mod |
+| `/f delhome` | Remove the faction HQ | Leader/Mod |
 | `/f home` | Teleport to the HQ | All members |
 | `/f info [faction]` | Faction statistics | All |
 | `/f c [message]` | Faction chat / toggle | All members |
@@ -71,7 +72,7 @@ Complete **Factions** plugin for **Paper 1.21.x** servers (**1.21 to 1.21.11**),
 - Each player has a power between **0 and 10** (configurable).
 - The faction's **total power** = the sum of its members' power.
 - To claim a chunk: `total power > number of claims`.
-- On each death: **−2 power**; on each kill: **+1 power**.
+- On each death: **−2 power**; on each kill: **+1 power**; when joining a faction: **+1 power**.
 - Regeneration: **+1 per minute**, caught up even offline.
 - **Overclaim**: an enemy chunk can be conquered when `enemy faction power < its claims` (enabled via `settings.overclaim`).
 - Inside a claim, outside players cannot break/place blocks, open chests or interact with blocks (doors, buttons, furnaces, etc.).

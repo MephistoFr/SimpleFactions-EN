@@ -296,6 +296,9 @@ public class FactionGui {
                 "&7Power is used to claim:",
                 "&7total power &c>&7 number of claims.",
                 "&7Ex: 30 power = 30 claims max."));
+        inv.setItem(15, item(Material.NAME_TAG, "&6Joining a faction",
+                "&7+&e1 power &7when joining",
+                "&7a faction."));
         inv.setItem(31, BACK);
         player.openInventory(inv);
     }
@@ -384,15 +387,17 @@ public class FactionGui {
         inv.setItem(10, glow(item(Material.RED_BED, "&6Set the HQ",
                 "&7/f sethome",
                 "&7Sets the faction HQ",
-                "&7at your current position.")));
+                "&7at your current position.",
+                "&7Leader and Mods only.")));
         inv.setItem(11, item(Material.ENDER_PEARL, "&6Teleportation",
                 "&7/f home",
                 "&7Teleports you to your",
-                "&7faction's HQ."));
-        inv.setItem(12, item(Material.COMPASS, "&6Information",
-                "&7One HQ position per",
-                "&7faction.",
-                "&7Can be changed at any time."));
+                "&7faction's HQ.",
+                "&7Available to all members."));
+        inv.setItem(12, item(Material.BARRIER, "&6Remove the HQ",
+                "&7/f delhome",
+                "&7Removes the faction HQ.",
+                "&7Leader and Mods only."));
         inv.setItem(31, BACK);
         player.openInventory(inv);
     }

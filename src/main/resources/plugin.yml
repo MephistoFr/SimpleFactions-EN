@@ -47,6 +47,9 @@ permissions:
   factions.command.sethome:
     description: Set the faction HQ.
     default: true
+  factions.command.delhome:
+    description: Remove the faction HQ.
+    default: true
   factions.command.home:
     description: Teleport to the faction HQ.
     default: true

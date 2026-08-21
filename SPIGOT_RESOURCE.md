@@ -21,7 +21,7 @@
 [*][B]Faction management:[/B] create, disband, invite, accept, kick and leave.
 [*][B]Rank system:[/B] Leader, Mod, Member and Recruit, with promotions and demotions.
 [*][B]Faction chat:[/B] faction chat and public/faction chat toggle.
-[*][B]Power:[/B] 10 maximum per player, lose 2 on death, gain 1 per kill, automatic regeneration (even offline).
+[*][B]Power:[/B] 10 maximum per player, lose 2 on death, gain 1 per kill, gain 1 when joining a faction, automatic regeneration (even offline).
 [*][B]Claims:[/B] claim and unclaim chunks based on the faction's total power.
 [*][B]Protection:[/B] outside players cannot break/place blocks, open chests or interact inside claims.
 [*][B]Overclaim:[/B] steal the territory of an enemy faction whose total power has dropped below its number of claims.
@@ -43,7 +43,8 @@
 [*][B]/f claim[/B] — Claim the current chunk
 [*][B]/f unclaim[/B] — Unclaim the current chunk
 [*][B]/f unclaimall[/B] — Unclaim all territory (Leader/Mod)
-[*][B]/f sethome[/B] — Set the HQ
+[*][B]/f sethome[/B] — Set the HQ (Leader/Mod)
+[*][B]/f delhome[/B] — Remove the HQ (Leader/Mod)
 [*][B]/f home[/B] — Teleport to the HQ
 [*][B]/f info [faction][/B] — Faction statistics
 [*][B]/f c [message][/B] — Faction chat / toggle

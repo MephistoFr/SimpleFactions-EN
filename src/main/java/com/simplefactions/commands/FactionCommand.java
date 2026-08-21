@@ -59,6 +59,8 @@ public class FactionCommand implements CommandExecutor {
                 return unclaimall(player);
             case "sethome":
                 return setHome(player);
+            case "delhome":
+                return delHome(player);
             case "home":
                 return home(player);
             case "info":
@@ -365,8 +367,36 @@ public class FactionCommand implements CommandExecutor {
             player.sendMessage(plugin.getConfigManager().msg("not-in-faction"));
             return true;
         }
+        FactionRole role = faction.getRole(player.getUniqueId());
+        if (role != FactionRole.LEADER && role != FactionRole.OFFICER) {
+            player.sendMessage(plugin.getConfigManager().msg("no-permission-role"));
+            return true;
+        }
         faction.setHome(player.getLocation());
         player.sendMessage(plugin.getConfigManager().msg("home-set"));
+        return true;
+    }
+
+    private boolean delHome(Player player) {
+        if (!hasPerm(player, "delhome")) {
+            return true;
+        }
+        Faction faction = plugin.getFactionManager().getFactionByPlayer(player);
+        if (faction == null) {
+            player.sendMessage(plugin.getConfigManager().msg("not-in-faction"));
+            return true;
+        }
+        FactionRole role = faction.getRole(player.getUniqueId());
+        if (role != FactionRole.LEADER && role != FactionRole.OFFICER) {
+            player.sendMessage(plugin.getConfigManager().msg("no-permission-role"));
+            return true;
+        }
+        if (!faction.isHomeSet()) {
+            player.sendMessage(plugin.getConfigManager().msg("home-not-set"));
+            return true;
+        }
+        faction.removeHome();
+        player.sendMessage(plugin.getConfigManager().msg("home-deleted"));
         return true;
     }
 
