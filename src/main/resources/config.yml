@@ -1,0 +1,114 @@
+# ============================================
+# SimpleFactions plugin configuration
+# ============================================
+
+settings:
+  # Maximum power of a player
+  max-power: 10.0
+  # Power lost on death (negative = loss)
+  power-per-death: -2.0
+  # Power gained by the killer on each kill
+  power-per-kill: 1.0
+  # Power regenerated per minute
+  power-regen-per-min: 1.0
+  # Regeneration interval (seconds)
+  power-regen-delay-seconds: 30
+  # Maximum number of members per faction
+  max-members: 50
+  # Invitation validity duration (seconds)
+  invite-expire-seconds: 300
+  # Maximum faction name length
+  max-name-length: 16
+  # Allow overclaim (claiming a weakened faction's land)
+  overclaim: true
+  # Automatic data save (minutes)
+  autosave-minutes: 5
+
+messages:
+  prefix: "&8[&6Factions&8]&r"
+  no-permission: "&cYou don't have permission to run this command."
+  console-only: "&cThis command can only be used by a player."
+  not-in-faction: "&cYou are not in a faction."
+  already-in-faction: "&cYou are already in a faction."
+  invalid-faction: "&cNo faction named &e%faction%&c exists."
+  faction-already-exists: "&cA faction named &e%name%&c already exists."
+  name-too-long: "&cThe name must not exceed %max% characters."
+  name-invalid: "&cThe name may only contain letters, numbers and underscores (minimum 3 characters)."
+  faction-created: "&aYou created the faction &e%name%&a !"
+  faction-disbanded: "&cThe faction &e%name%&c has been disbanded."
+  cannot-leave-as-leader: "&cThe leader cannot leave the faction. Use &e/f disband&c."
+  left-faction: "&cYou left your faction."
+  member-left: "&7%player% &cleft the faction."
+  player-not-found: "&cPlayer &e%player%&c not found."
+  player-not-in-faction: "&cThis player is not in your faction."
+  target-already-in-faction: "&cPlayer &e%player%&c is already in a faction."
+  player-kicked: "&cPlayer &e%player%&c has been kicked from the faction."
+  you-were-kicked: "&cYou were kicked from the faction &e%faction%&c."
+  cannot-kick-leader: "&cYou cannot kick the faction leader."
+  player-invited: "&aYou invited &e%player%&a to the faction."
+  invited-notification: "&e%player% &awas invited to the faction."
+  you-were-invited: "&aYou were invited to join the faction &e%faction%&a. Type &e/f join %faction%&a."
+  already-invited: "&cThis player already has a pending invitation."
+  no-invite: "&cYou don't have a valid invitation for the faction &e%faction%&c."
+  joined-faction: "&aYou joined the faction &e%faction%&a !"
+  player-joined: "&e%player% &ajoined the faction !"
+  faction-full: "&cThe faction is full (%max% members maximum)."
+  no-permission-role: "&cYour rank does not allow you to perform this action."
+  claim-success: "&aChunk claimed (&e%x%, %z%&a). Claims: &e%claims%&a / Power: &e%power%&a."
+  claim-overclaim: "&aYou overclaimed the chunk of the enemy faction !"
+  claim-enemy-strong: "&cImpossible: the enemy faction still has enough power to defend its territory."
+  claim-not-enough-power: "&cNot enough power: your faction must have more total power than claims."
+  claim-already-owned: "&cThis chunk already belongs to your faction."
+  unclaim-success: "&aYou removed this chunk from your territory."
+  unclaim-not-yours: "&cThis chunk does not belong to your faction."
+  unclaimall-permission: "&cOnly the leader and the officers can use this command."
+  unclaimall-success: "&aAll of your faction's claims have been removed."
+  home-set: "&aThe faction HQ has been set to your position."
+  home-not-set: "&cYour faction has not set an HQ yet. Use &e/f sethome&c."
+  home-teleported: "&aTeleporting to the faction HQ..."
+  protection-denied: "&cThis territory belongs to the faction &e%faction%&c."
+  death-power-loss: "&cYou lost &e%power%&c power. Power: &e%total%&c/%max%."
+  kill-power-gain: "&aYou gained &e%power%&a power. Power: &e%total%&a/%max%."
+  chat-format: "&7[&e%faction%&7] &6%player%&7: %message%"
+  chat-toggled-on: "&aFaction chat enabled. Switch back to public chat with &e/f c&a."
+  chat-toggled-off: "&aPublic chat enabled."
+  promoted: "&aYou were promoted to &e%role%&a."
+  demoted: "&aYou were demoted to &e%role%&a."
+  promoted-notification: "&e%player% &awas promoted to &e%role%&a."
+  demoted-notification: "&e%player% &awas demoted to &e%role%&a."
+  cannot-promote: "&cCannot promote this player any further."
+  cannot-demote: "&cCannot demote this player."
+  usage-create: "&cUsage: &e/f create <name>"
+  usage-invite: "&cUsage: &e/f invite <player>"
+  usage-join: "&cUsage: &e/f join <faction>"
+  usage-kick: "&cUsage: &e/f kick <player>"
+  usage-promote: "&cUsage: &e/f promote <player>"
+  usage-demote: "&cUsage: &e/f demote <player>"
+  unknown-command: "&cUnknown command: &e%command%"
+  reload-success: "&aConfiguration reloaded successfully."
+  info-header: "&8&m--------------------&r &6[ &e%name% &6] &8&m--------------------"
+  info-leader: "&6Leader: &e%leader%"
+  info-description: "&6Description: &e%description%"
+  info-members: "&6Members: &e%count%"
+  info-power: "&6Total power: &e%power% &7/ &e%max%"
+  info-claims: "&6Claims: &e%claims%"
+  info-member-list: "&6--- Members ---"
+  info-member-line: "&7- &e%role%&7: &f%player% &7%status%"
+  help:
+    - "&8&m--------------------&r &6[ &eFactions &6] &8&m--------------------"
+    - "&e/f create <name> &7- Create a faction"
+    - "&e/f disband &7- Disband your faction"
+    - "&e/f invite <player> &7- Invite a player"
+    - "&e/f join <faction> &7- Join a faction"
+    - "&e/f leave &7- Leave your faction"
+    - "&e/f kick <player> &7- Kick a player"
+    - "&e/f promote|demote <player> &7- Manage roles"
+    - "&e/f claim &7- Claim the current chunk"
+    - "&e/f unclaim &7- Unclaim the current chunk"
+    - "&e/f unclaimall &7- Unclaim all territory"
+    - "&e/f sethome &7- Set the faction HQ"
+    - "&e/f home &7- Teleport to the HQ"
+    - "&e/f info [faction] &7- Faction information"
+    - "&e/f c [message] &7- Faction chat"
+    - "&e/f gui &7- Open the interactive guide"
+    - "&e/f reload &7- Reload the configuration (admin)"

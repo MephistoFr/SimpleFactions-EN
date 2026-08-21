@@ -1,0 +1,92 @@
+# SpigotMC description — paste into the resource creation form
+
+> Open https://www.spigotmc.org/resources/create and paste this content into the "Description" field.
+> File to upload: `target/SimpleFactions-1.0.0.jar`
+> Suggested tags: Factions, Claim, Territory, Power, Land
+> Tested version: Paper 1.21.1 (Java 21)
+
+---
+
+[SIZE=6][B][COLOR=rgb(230, 126, 34)]SimpleFactions[/COLOR] — The complete Factions plugin for Paper 1.21.1[/B][/SIZE]
+
+[CENTER][B][COLOR=rgb(255, 255, 255)]Factions · Claims · Power · Chat · Ranks · Overclaim · No dependencies[/COLOR][/B][/CENTER]
+
+[B]SimpleFactions[/B] is a standalone, complete factions plugin for [B]Paper 1.21.1[/B] servers (Java 21). No third-party economy or land plugin is required: everything is included, with simple local JSON storage.
+
+[SIZE=5][B]Features[/B][/SIZE]
+
+[LIST]
+[*][B]Faction management:[/B] create, disband, invite, accept, kick and leave.
+[*][B]Rank system:[/B] Leader, Mod, Member and Recruit, with promotions and demotions.
+[*][B]Faction chat:[/B] faction chat and public/faction chat toggle.
+[*][B]Power:[/B] 10 maximum per player, lose 2 on death, gain 1 per kill, automatic regeneration (even offline).
+[*][B]Claims:[/B] claim and unclaim chunks based on the faction's total power.
+[*][B]Protection:[/B] outside players cannot break/place blocks, open chests or interact inside claims.
+[*][B]Overclaim:[/B] steal the territory of an enemy faction whose total power has dropped below its number of claims.
+[*][B]HQ:[/B] set and teleport to your faction's headquarters.
+[*][B]Interactive guide:[/B] a complete GUI (/f gui) explains the whole plugin in-game.
+[/LIST]
+
+[SIZE=5][B]Commands[/B][/SIZE]
+
+[LIST]
+[*][B]/f gui[/B] — Open the interactive guide
+[*][B]/f create <name>[/B] — Create a faction
+[*][B]/f disband[/B] — Disband the faction (Leader)
+[*][B]/f invite <player>[/B] — Invite a player (Leader/Mod)
+[*][B]/f join <faction>[/B] — Join a faction on invitation
+[*][B]/f leave[/B] — Leave the faction
+[*][B]/f kick <player>[/B] — Kick a player (Leader/Mod)
+[*][B]/f promote|demote <player>[/B] — Manage ranks
+[*][B]/f claim[/B] — Claim the current chunk
+[*][B]/f unclaim[/B] — Unclaim the current chunk
+[*][B]/f unclaimall[/B] — Unclaim all territory (Leader/Mod)
+[*][B]/f sethome[/B] — Set the HQ
+[*][B]/f home[/B] — Teleport to the HQ
+[*][B]/f info [faction][/B] — Faction statistics
+[*][B]/f c [message][/B] — Faction chat / toggle
+[*][B]/f reload[/B] — Reload the configuration (Admin)
+[*][B]/f help[/B] — Text-based help
+[/LIST]
+
+[SIZE=5][B]Permissions[/B][/SIZE]
+
+[LIST]
+[*][B]factions.command.base[/B] — Access to /f (default: all)
+[*][B]factions.command.<subcommand>[/B] — Access to each subcommand (default: all)
+[*][B]factions.command.gui[/B] — Interactive guide (default: all)
+[*][B]factions.admin[/B] — Admin commands, /f reload (default: op)
+[/LIST]
+
+[SIZE=5][B]Installation[/B][/SIZE]
+
+[LIST=1]
+[*]Place [B]SimpleFactions-1.0.0.jar[/B] in your server's [B]plugins/[/B] folder.
+[*]Restart the server.
+[*]Configure [B]config.yml[/B] then run [B]/f reload[/B].
+[/LIST]
+
+Data is saved automatically in [B]plugins/SimpleFactions/data/[/B] (factions.json and players.json), every 5 minutes and on server shutdown.
+
+[SIZE=5][B]Configuration (excerpt)[/B][/SIZE]
+
+[CODE=yaml]settings:
+  max-power: 10.0          # maximum power per player
+  power-per-death: -2.0    # loss on death
+  power-per-kill: 1.0      # killer's gain
+  power-regen-per-min: 1.0 # regeneration per minute
+  max-members: 50          # maximum members
+  invite-expire-seconds: 300
+  overclaim: true          # enables overclaim
+  autosave-minutes: 5[/CODE]
+
+All messages are customizable in the [B]messages:[/B] section.
+
+[SIZE=5][B]Screenshots[/B][/SIZE]
+
+[SPOILER=Interactive guide (/f gui)]
+Add your screenshots here ([IMG]url[/IMG] format).
+[/SPOILER]
+
+[B]Source code:[/B] available on GitHub (link to add here).
+[B]License:[/B] MIT.

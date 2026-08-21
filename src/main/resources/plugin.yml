@@ -1,0 +1,74 @@
+name: SimpleFactions
+version: 1.0.0
+main: com.simplefactions.SimpleFactions
+api-version: 1.21
+authors: [Martin]
+description: Complete Factions plugin for Paper 1.21.1
+
+commands:
+  factions:
+    description: Main command for the Factions plugin.
+    usage: /f <subcommand>
+    aliases: [f]
+    permission: factions.command.base
+    permission-message: "You don't have permission to use this command."
+
+permissions:
+  factions.command.base:
+    description: Access to /f command.
+    default: true
+  factions.command.create:
+    description: Create a faction.
+    default: true
+  factions.command.disband:
+    description: Disband your faction.
+    default: true
+  factions.command.invite:
+    description: Invite a player.
+    default: true
+  factions.command.join:
+    description: Join a faction.
+    default: true
+  factions.command.leave:
+    description: Leave your faction.
+    default: true
+  factions.command.kick:
+    description: Kick a player from the faction.
+    default: true
+  factions.command.claim:
+    description: Claim the current chunk.
+    default: true
+  factions.command.unclaim:
+    description: Unclaim the current chunk.
+    default: true
+  factions.command.unclaimall:
+    description: Unclaim all territory.
+    default: true
+  factions.command.sethome:
+    description: Set the faction HQ.
+    default: true
+  factions.command.home:
+    description: Teleport to the faction HQ.
+    default: true
+  factions.command.info:
+    description: View faction statistics.
+    default: true
+  factions.command.chat:
+    description: Use faction chat.
+    default: true
+  factions.command.promote:
+    description: Promote a member.
+    default: true
+  factions.command.demote:
+    description: Demote a member.
+    default: true
+  factions.command.gui:
+    description: Open the interactive guide.
+    default: true
+  factions.admin:
+    description: Access to admin commands.
+    default: op
+    children:
+      factions.command.reload:
+        description: Reload the configuration.
+        default: true
