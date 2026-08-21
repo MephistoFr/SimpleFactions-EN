@@ -1,9 +1,9 @@
 # SimpleFactions
 
-[![Spigot 1.21.1](https://img.shields.io/badge/Paper-1.21.1-blue)](https://papermc.io)
+[![Spigot 1.21.x](https://img.shields.io/badge/Paper-1.21.x-blue)](https://papermc.io)
 [![Java](https://img.shields.io/badge/Java-21-orange)](https://adoptium.net)
 
-Complete **Factions** plugin for **Paper 1.21.1** servers, fully standalone (no external dependencies, no third-party economy plugin required). Local **JSON** data storage.
+Complete **Factions** plugin for **Paper 1.21.x** servers (**1.21 to 1.21.11**), fully standalone (no external dependencies, no third-party economy plugin required). Local **JSON** data storage.
 
 ## Features
 
@@ -19,8 +19,10 @@ Complete **Factions** plugin for **Paper 1.21.1** servers, fully standalone (no 
 
 ## Requirements
 
-- Server running **Paper 1.21.1** (or Spigot/another Paper-API-compatible implementation)
+- Server running **Paper 1.21.x** (1.21 to 1.21.11) or Spigot/another Paper-API-compatible implementation
 - **Java 21**
+
+> Compatible with all Paper API versions from **1.21** to **1.21.11** (tested against each version).
 
 ## Installation
 

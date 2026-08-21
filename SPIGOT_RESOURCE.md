@@ -2,8 +2,8 @@
 
 > Open https://www.spigotmc.org/resources/create and paste this content into the "Description" field.
 > File to upload: `target/SimpleFactions-1.0.0.jar`
-> Suggested tags: Factions, Claim, Territory, Power, Land
-> Tested version: Paper 1.21.1 (Java 21)
+> Tags suggérés : Factions, Claim, Territory, Power, Land
+> Tested versions: Paper 1.21 to 1.21.11 (Java 21)
 
 ---
 
@@ -11,7 +11,7 @@
 
 [CENTER][B][COLOR=rgb(255, 255, 255)]Factions · Claims · Power · Chat · Ranks · Overclaim · No dependencies[/COLOR][/B][/CENTER]
 
-[B]SimpleFactions[/B] is a standalone, complete factions plugin for [B]Paper 1.21.1[/B] servers (Java 21). No third-party economy or land plugin is required: everything is included, with simple local JSON storage.
+[B]SimpleFactions[/B] is a standalone, complete factions plugin for [B]Paper 1.21.x[/B] servers ([B]1.21 to 1.21.11[/B], Java 21). No third-party economy or land plugin is required: everything is included, with simple local JSON storage.
 
 [SIZE=5][B]Features[/B][/SIZE]
 

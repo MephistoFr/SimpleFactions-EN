@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>SimpleFactions</name>
-    <description>Complete Factions plugin for Paper 1.21.1</description>
+    <description>Complete Factions plugin for Paper 1.21.x (1.21 to 1.21.11)</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
